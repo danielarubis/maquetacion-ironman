@@ -25,8 +25,14 @@ body {
 .card .content {
   position: relative;
   width: 50%;
-  left: 5%;
+  left: 20%;
   transition: 0.5s;
+  opacity: 0;
+}
+
+.card:hover .content {
+  left: 0;
+  opacity: 1;
 }
 
 .card .content a {
@@ -48,12 +54,17 @@ body {
 }
 
 .card img {
-  position: relative;
-  align-items: center;
+  position: absolute;
   bottom: 0;
-  height: 400px;
-  animation-name: mover;
-  animation-duration: 2s;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 350px;
+  transition: 0.7s;
+}
+
+.card:hover img {
+  left: 80%;
+  height: 450px;
 }
 
 h2{
